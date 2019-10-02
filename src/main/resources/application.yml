@@ -42,4 +42,4 @@
 #    name: 小狗
 #    age: 1
 #  last-name: 张三
-##  last-name是自动提示的结果它和lastName是一样的
+##  last-name是自动提示的结果它和lastName是一样的(学名:松散绑定 松散语法)
