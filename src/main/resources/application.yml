@@ -1,0 +1,45 @@
+
+#修改配置文件的默认值
+
+#yml的基本语法
+#用空格缩进,属性和值大小写敏感
+
+#值的写法
+#1.字面量:普通的值(数字,字符串,布尔)
+#写法:用K: V字面直接来写
+#字符串默认不用双引号或单引号,双引号不会转义特殊字符,单引号会转义特殊字符(即特殊字符最终只是一个普通的字符串输出)
+
+#2.对象 Map(属性和值) (键值对)
+#写法:对象也是K: V的方式
+#friends1:
+#  lastname: zhangsan
+#  age: 20
+
+#行内写法
+#friends2: {lastname: lisi,age: 20}
+
+#3.数组(List Set)
+#用- 值表示数组中的一个元素
+#pets1:
+#  - cat
+#  - dog
+#  - chick
+
+#行内写法
+#pets2: [cat,dog,chick]
+
+#举例
+#person:
+##  lastName: 张三
+#  age: 18
+#  boss: false
+#  birth: 2000/1/1
+#  maps: {k1: v1,k2: v2,k3: v3}
+#  lists:
+#    - lisi
+#    - zhaoliu
+#  dog:
+#    name: 小狗
+#    age: 1
+#  last-name: 张三
+##  last-name是自动提示的结果它和lastName是一样的

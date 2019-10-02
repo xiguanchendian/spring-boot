@@ -19,6 +19,7 @@
     </properties>
 
     <dependencies>
+        <!--springboot场景启动器,导入了web模块正常运行所依赖的组件-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -29,8 +30,16 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
+        <!--导入配置文件处理器,配置文件进行绑定就会有提示-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
+        </dependency>
     </dependencies>
 
+    <!--该插件用于将应用打成一个可执行jar包-->
     <build>
         <plugins>
             <plugin>
