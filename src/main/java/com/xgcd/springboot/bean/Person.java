@@ -11,14 +11,19 @@ import java.util.Map;
 /**
  * 将配置文件中的配置映射到这个组件中
  *
- * @ConfigurationProperties 告诉springboot将本类中的所有属性和配置文件中的相关配置进行绑定:
- * prefix:配置文件中的哪个属性下的所有属性进行一一绑定
- * 只有该组件是容器中的组件才可以发挥作用(提供@ConfigurationProperties功能)
+ * @ConfigurationProperties(prefix = "person") 默认从全局配置文件application.properties或application.yml中获取值,
+ *                          告诉springboot将本类中的所有属性和配置文件中的相关配置进行绑定:
+ *                          prefix:配置文件中的哪个属性下的所有属性进行一一绑定
+ * 只有该组件是容器中的组件才可以发挥作用(提供@ConfigurationProperties功能),所以加了@Component注解
+ *
  * 可以在test中进行单元测试
+ *
+ * @PropertySource(value = {"classpath:person.properties"}, encoding = "utf-8") 加载指定的配置文件
+ *
  */
 @Component
 @ConfigurationProperties(prefix = "person")
-@PropertySource(value = {"classpath:application.properties"}, encoding = "utf-8")
+@PropertySource(value = {"classpath:person.properties"}, encoding = "utf-8")
 public class Person {
     private String lastName;
     private Integer age;
