@@ -43,3 +43,19 @@
 #    age: 1
 #  last-name: 张三
 ##  last-name是自动提示的结果它和lastName是一样的(学名:松散绑定 松散语法)
+server:
+  port: 8080
+---
+spring:
+  profiles:
+    active: pro
+---
+server:
+  port: 8081
+spring:
+  profiles: dev
+---
+server:
+  port: 8082
+spring:
+  profiles: pro
