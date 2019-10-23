@@ -1,4 +1,4 @@
-package com.xgcd.springboot;
+package com.xgcd.springboot.utils;
 
 import org.apache.commons.lang3.StringUtils;
 import org.bouncycastle.jce.provider.BouncyCastleProvider;
