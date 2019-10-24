@@ -29,7 +29,6 @@ public class ApplicationTests {
     @Test
     public void contextLoads() {
         System.out.println(person);
-        HashMap<Object, Object> map = new HashMap<>();
     }
 
 
