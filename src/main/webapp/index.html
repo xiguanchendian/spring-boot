@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="static/js/jquery-1.8.3.js"></script>
+    <script src="static/js/rsasecurity.js"></script>
+</head>
+<body>
+<button onclick="sendServer()">Click</button>
+</body>
+<script type="application/javascript">
+    function sendServer() {
+        $.ajax({
+            // async: false,
+            // cache: false,
+            type: 'POST',
+            dataType: "json",
+            url: 'RSAController.do?responseEncryptContent',//请求的action路径
+            error: function () {//请求失败处理函数
+                alert('请求失败');
+            },
+            success: function (data) { //请求成功后处理函数。
+                alert(data);
+            }
+        });
+    }
+</script>
+</html>
