@@ -54,6 +54,18 @@
             <version>3.9</version>
         </dependency>
 
+        <!--整合swagger2 用于生成前后端分离接口文档-->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>2.9.2</version>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>2.9.2</version>
+        </dependency>
+
     </dependencies>
 
     <!--该插件用于将应用打成一个可执行jar包-->
